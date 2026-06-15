@@ -380,8 +380,7 @@ color: white;
         font-size: 20px;
         color: var(--text);
     }
-
-    /* أزرار الفتح والإغلاق */
+    
     .nav_toggle {
         display: block;
         color: var(--accent);
