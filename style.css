@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;600&family=Quicksand:wght@300..700&family=Syne:wght@400..800&family=Dancing+Script:wght@400;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@400;500;600&family=Quicksand:wght@300..700&family=Syne:wght@400..800&family=Dancing+Script:wght@400;700&display=swap');
 :root{
     --bg: #0f0a1f;
     --card: #1a1433;
@@ -94,23 +94,23 @@ body{
 }
 
 
-/* ############### HERO SEACTION ####################*/
- .hero-seaction{
- min-height: 100%;
- width: 100%;
-margin-top: 120px;
- padding: 40px 20px;
+/* ############### HERO SECTION #################### */
+  .hero-section{
+   min-height: 100%;
+   width: 100%;
+   margin-top: 120px;
+   padding: 40px 20px;
 }
 
-.hero-seaction p:first-child {
- color: var(--pink);
-font-size: 1.1rem;
- font-weight: 500;
-letter-spacing: 3px;
- margin-bottom: 10px;
+.hero-section p:first-child {
+   color: var(--pink);
+   font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
-.hero-seaction h1{
+.hero-section h1{
  color: white;
  font-family: 'Syne', sans-serif;
  font-size: 45px;
@@ -119,14 +119,14 @@ letter-spacing: 3px;
  line-height: 1.1;
 }
 
-.hero-seaction h1 span{
+.hero-section h1 span{
  color: var(--accent);
  font-family: 'Dancing Script', cursive;
  font-weight: 700;
  font-size: 50px;
 }
 
-.hero-seaction h3 {
+.hero-section h3 {
  font-size: 1.8rem;
  color: var(--light);
  margin-bottom: 20px;
@@ -134,11 +134,11 @@ letter-spacing: 3px;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.hero-seaction p:last-of-type {
-color: #c9b0e0;
-font-size: 1.1rem;
-line-height: 1.6;
- max-width: 500px;
+.hero-section p:last-of-type {
+  color: #c9b0e0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
 }
 
 .hero-img-box {
@@ -167,7 +167,7 @@ line-height: 1.6;
 
 .img-overlay-text {
     position: absolute;
-    bottom:  10%;        
+    bottom: 10%;        
     left: 50%;     
     transform: translateX(-50%);
     font-family: 'Syne', sans-serif;
@@ -176,10 +176,10 @@ line-height: 1.6;
     color: #ffffff;
     text-shadow: 0 0 8px var(--accent), 0 0 15px #000; 
     pointer-events: none; 
-}
+} 
 
 /* ======== BUTTONS =========  */
-.hero-seaction button {
+ .hero-section button {
     padding: 14px 28px;
     text-align: center;
     margin: 15px 10px 10px 0;;
@@ -203,20 +203,20 @@ line-height: 1.6;
 
 }
 
-.hero-seaction button:hover {
+.hero-section button:hover {
     transform: scale(1.08) translateY(-3px);
     box-shadow: 0 10px 25px rgba(255, 77, 166, 0.4);
 }
 
-.hero-seaction button a{
+.hero-section button a{
     text-decoration: none;
     color: white;
 } 
 
-.hero-seaction button a::after{
+.hero-section button a::after{
     content: '';
     color: var(--accent);
-}
+} 
 
 
 /* ====================== ABOUT SECTION ====================== */
@@ -332,4 +332,175 @@ color: white;
 
 .none {
     border: none;
+}  
+
+/* ====================== RESPONSIVE DESIGN (MOBILE) ====================== */
+
+@media screen and (max-width: 768px) {
+    body {
+        max-width: 100%; 
+        overflow-x: hidden; /* مفيش اسكرول بالعرض  */
+        padding: 12px 15px;
+    }
+    
+    .header {
+        width: 100%; 
+    }
+
+    .nav-container {
+        height: 60px;
+    }
+
+    #nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 75%; /*هتاخد 75% من عرض الشاشه */
+        height: 100vh;
+        background-color: var(--card);
+        padding: 80px 30px;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+        z-index: 200;
+    }
+
+    #nav-menu.show-menu { /* كلاس ف js*/
+        right: 0;
+    }
+
+    .nav_list {
+        display: flex !important; 
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .nav_list li a {
+        font-family: 'Poppins', sans-serif !important; 
+        font-size: 20px;
+        color: var(--text);
+    }
+
+    /* أزرار الفتح والإغلاق */
+    .nav_toggle {
+        display: block;
+        color: var(--accent);
+        font-size: 26px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav_close {
+        display: block;
+        color: var(--accent);
+        font-size: 30px;
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .hero-section {
+        margin-top: 90px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-section h1 {
+        font-size: 32px; 
+    }
+
+    .hero-section h1 span {
+        font-size: 36px;
+    }
+
+    .hero-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .hero-section p:last-of-type {
+        margin: 0 auto 25px auto;
+        font-size: 1rem;
+    }
+
+    .hero-img-box {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 250px;
+        height: 250px;
+        margin: 20px auto 30px auto;
+    }
+
+    .hero-img-box img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-overlay-text {
+        font-size: 18px;
+        bottom: 23px;
+    }
+
+    .hero-section button {
+        width: 85%;
+        margin: 8px 0;
+    }
+
+    .about-section {
+        margin-top: 80px;
+        padding: 20px 10px;
+    }
+
+    .about-section h2 {
+        font-size: 32px;
+    }
+
+    .about-section .container {
+        flex-direction: column; 
+        height: auto;
+        padding: 30px 15px;
+        row-gap: 30px;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .about-section .readMore {
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    .card-about {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .card img {
+        position: static; 
+        margin: 0 auto 10px auto;
+        display: block;
+    }
+
+    .card h3, .card p {
+        margin-left: 0;
+    }
 }
