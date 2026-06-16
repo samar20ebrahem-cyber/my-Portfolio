@@ -23,3 +23,28 @@ navLinks.forEach(link => {
     });
 });
 
+
+// زرار ال اضافه البراجراف سيكشن عني 
+
+
+
+
+//   هنضيف الاسبان حسب الرانج 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const skills = document.querySelectorAll(".skill");
+
+    skills.forEach(skill => {
+        const rangeInput = skill.querySelector("input[type='range']");
+        const spanText = skill.querySelector("span");
+
+        if (rangeInput && spanText) {
+            spanText.textContent = rangeInput.value + "%";
+
+    //   لو شلتي الديسبول من الرانج الاسبان هيتحدث تلقائي
+            rangeInput.addEventListener("input", () => {
+                spanText.textContent = rangeInput.value + "%";
+            });
+        }
+    });
+});
