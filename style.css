@@ -422,12 +422,12 @@ color: white;
 
 .skill input[type="range"] {
     width: 140px;         
-    height: 6px;            
+    height: 8px;            
     background: #2a1f4d;    
     border-radius: 5px;
     outline: none;
     appearance: none;
-    margin: 10px 0;
+    margin: 0;
 }
 
 .skill .range-group {
@@ -447,26 +447,26 @@ color: white;
 /* Chrome, Safari, Edge */
 .skill input[type="range"]::-webkit-slider-runnable-track {
     height: 6px;
-    background: linear-gradient(to right, #c0268f, #9F2B7E);
     border-radius: 5px;
+    background: transparent;
 }
 
 .skill input[type="range"]::-webkit-slider-thumb {
     appearance: none;
-    width: 20px;               
-    height: 20px;
+    width: 0;               
+    height: 0;
 }
 
 /* Firefox */
 .skill input[type="range"]::-moz-range-track {
     height: 6px;
-    background: linear-gradient(to right, #c0268f, #9F2B7E);
+    background: transparent;
     border-radius: 5px;
 }
 
 .skill input[type="range"]::-moz-range-thumb {
-    width: 10px;
-    height: 10px;
+    width: 0;
+    height: 0;
     background: white;
     border: none;
 }
