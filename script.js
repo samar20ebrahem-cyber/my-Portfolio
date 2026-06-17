@@ -24,20 +24,18 @@ navLinks.forEach(link => {
 });
 
 
-// زرار ال اضافه البراجراف سيكشن عني 
+// زرار الاضافه البراجراف سيكشن عني 
 
 const addMoreP = document.getElementById('readMore');
 const readSecoundP = document.getElementById('read');
 
 if (addMoreP && readSecoundP) {
     addMoreP.addEventListener('click', () => {
-        // بنشيك على الـ display الحالي للبراجراف
         if (readSecoundP.style.display === 'block') {
-            // لو هو ظاهر فعلاً.. إذن اليوزر عاوز يقفل (Read Less)
             readSecoundP.style.display = 'none';
             addMoreP.textContent = 'Read More';
-        } else {
-            // لو هو مخفي (أو لسه الصفحة فاتحة).. إذن اليوزر عاوز يفتح (Read More)
+        } 
+        else {
             readSecoundP.style.display = 'block';
             addMoreP.textContent = 'Read Less';
         }
