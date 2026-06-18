@@ -575,20 +575,180 @@ color: white;
     color: white;
 }
 
+/* #################=========================== CONTACT SECTION ===========================#################  */
+.contact-section{
+    height: 100%;
+    width: 100%;
+    margin-top: 120px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.contact-section h2{
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: 45px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(255, 77, 166, 0.5);
+    line-height: 1.1;
+    text-align:center ;
+}
+
+.container-contact{
+   display:flex;
+   gap: 40px;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   border-radius: 20px;
+   border: #2a1f4d solid var(--card);
+   background-color: var(--bg);
+   padding: 30px;
+   box-sizing: border-box; 
+}
+
+.contact-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    width: 50%;
+}
+
+.card-contact{
+  background:var(--card);
+  padding: 15px;
+  border: #0f0a1f;
+  border-radius: 20px;
+  padding: 15px;
+  transition: 1s ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-contact:hover{
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 77, 166, 0.4);
+}
+
+.card-contact a{
+   color:#ff1493;
+   text-decoration: none;
+}
+
+.card-contact a i{
+    font-size: 70px;
+}
+
+.card-contact p{
+    font-size: 18px;
+    font-family: serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-text-wrapper {
+    width: 45%;
+    color: white;
+}
+
+.contact-text-wrapper h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.thank-you-text {
+    font-family: 'Celebrity', 'Caveat', 'Great Vibes', cursive; 
+    font-size: 35px;
+    color: #ff1493;
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.3);
+    margin: 0;
+}
+
+/* ###################==================== Footer ====================################### */
+.footer {
+    margin-top: 60px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 20, 147, 0.1);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-info {
+    display: flex;
+    gap: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    border: none;
+}
+
+.footer .nav_logo {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.footer .nav_logo:hover {
+    color: white;
+}
+
+/* btton scrol */
+#scrollToTopBtn {
+    display: none; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 22px;
+    border: none;
+    outline: none;
+    background-color: #ff1493;
+    color: white;
+    cursor: pointer;
+    padding: 10px 14px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
+    transition: 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: white;
+    color: #ff1493;
+    transform: translateY(-5px);
+}
+
+/* change scroll by chat gpt */
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent); 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--pink); 
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg);
+}
 
 /* ====================== RESPONSIVE DESIGN (MOBILE) ====================== */
 
@@ -792,12 +952,32 @@ color: white;
     }
     .card-projects{
         width: 100%;
-        max-width: 350px;
+        min-width: 310px;
         margin: 0 auto;
         height: auto;
     }
     .card-projects img {
         width: 100%;
         height: auto; 
+    }
+
+    /* ###########################=========================== RESPONSIVE CONTACT SECTION  ===========================###########################  */
+    .container-contact {
+        flex-direction: column;
+    }
+    .contact-cards-wrapper, .contact-text-wrapper {
+        width: 100%;
+    }
+    .contact-cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* ###########################=========================== RESPONSIVE FOOTER ===========================###########################  */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-info {
+        flex-direction: column;
+        gap: 10px;
     }
 }
